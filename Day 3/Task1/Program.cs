@@ -19,7 +19,7 @@ namespace shapeHierarchy
 
     public class Circle : Shape
     {
-        private double Radius;
+        private readonly double Radius;
 
         public Circle(double r) : base("Circle")
         {
@@ -51,8 +51,8 @@ namespace shapeHierarchy
 
     public class Triangle : Shape
     {
-        double Base;
-        double Height;
+        private readonly double Base;
+        private readonly double Height;
 
         public Triangle(double Height, double Base) : base("Triangle")
         {
@@ -70,7 +70,7 @@ namespace shapeHierarchy
     {
         public static void PrintShapeArea(Shape shape)
         {
-            Console.WriteLine($"The area for this {shape.Name} is {shape.CalculateArea()}");
+            Console.WriteLine($"The are for this {shape.Name} is {shape.CalculateArea()}");
            
         }
 
