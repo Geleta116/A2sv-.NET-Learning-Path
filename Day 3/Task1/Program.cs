@@ -70,7 +70,7 @@ namespace shapeHierarchy
     {
         public static void PrintShapeArea(Shape shape)
         {
-            Console.WriteLine($"The are for this {shape.Name} is {shape.CalculateArea()}");
+            Console.WriteLine($"The area for this {shape.Name} is {shape.CalculateArea()}");
            
         }
 
