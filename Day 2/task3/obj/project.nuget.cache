@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "hS6836WmsBNz+EY0K6CwuJQrG017mb3ep/2tS/ZNa3kjL5Aqat2jwzU5Q1scghuf8h36SQdRWuyM/EJaqmazsg==",
+  "success": true,
+  "projectFilePath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/task3/task3.csproj",
+  "expectedPackageFiles": [
+    "/home/geleta/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/nunit/3.13.3/nunit.3.13.3.nupkg.sha512"
+  ],
+  "logs": []
+}
