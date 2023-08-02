@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "2Fkgc0YcftMqT8OirvfwxQ9aU5mJu4E5dQGczONrU2zHwvezYpx+LFK+QO5W0Li/vEJWaBzIQ5w458PAkx5Elw==",
+  "success": true,
+  "projectFilePath": "/home/geleta/Desktop/Asp.net/task1/task1.csproj",
+  "expectedPackageFiles": [
+    "/home/geleta/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/nunit/3.13.3/nunit.3.13.3.nupkg.sha512"
+  ],
+  "logs": []
+}

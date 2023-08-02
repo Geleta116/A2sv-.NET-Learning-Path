@@ -1,0 +1,15 @@
+/home/geleta/Desktop/Asp.net/task2/bin/Debug/net7.0/task2
+/home/geleta/Desktop/Asp.net/task2/bin/Debug/net7.0/task2.deps.json
+/home/geleta/Desktop/Asp.net/task2/bin/Debug/net7.0/task2.runtimeconfig.json
+/home/geleta/Desktop/Asp.net/task2/bin/Debug/net7.0/task2.dll
+/home/geleta/Desktop/Asp.net/task2/bin/Debug/net7.0/task2.pdb
+/home/geleta/Desktop/Asp.net/task2/obj/Debug/net7.0/task2.csproj.AssemblyReference.cache
+/home/geleta/Desktop/Asp.net/task2/obj/Debug/net7.0/task2.GeneratedMSBuildEditorConfig.editorconfig
+/home/geleta/Desktop/Asp.net/task2/obj/Debug/net7.0/task2.AssemblyInfoInputs.cache
+/home/geleta/Desktop/Asp.net/task2/obj/Debug/net7.0/task2.AssemblyInfo.cs
+/home/geleta/Desktop/Asp.net/task2/obj/Debug/net7.0/task2.csproj.CoreCompileInputs.cache
+/home/geleta/Desktop/Asp.net/task2/obj/Debug/net7.0/task2.dll
+/home/geleta/Desktop/Asp.net/task2/obj/Debug/net7.0/refint/task2.dll
+/home/geleta/Desktop/Asp.net/task2/obj/Debug/net7.0/task2.pdb
+/home/geleta/Desktop/Asp.net/task2/obj/Debug/net7.0/task2.genruntimeconfig.cache
+/home/geleta/Desktop/Asp.net/task2/obj/Debug/net7.0/ref/task2.dll
