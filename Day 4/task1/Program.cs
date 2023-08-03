@@ -7,22 +7,26 @@ namespace Program
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Task Manager!");
+            
             TaskManager taskManager = new TaskManager();
             bool running = true;
             while (running)
             {
+                Console.WriteLine("-----------------------------");
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine("1. List tasks");
                 Console.WriteLine("2. Add task");
                 Console.WriteLine("3. Update task");
                 Console.WriteLine("4. Filter tasks");
                 Console.WriteLine("5. Exit");
+                Console.WriteLine("----------------------");
                 string? input = Console.ReadLine();
                 switch (input)
                 {
                     case "1":
                         var allTasks = taskManager.GetTasksAsync().GetAwaiter().GetResult();
                         Console.WriteLine("NAME - DESCRIPTION - CATEGORY - STATUS");
+                       
                         foreach (Tasks task in allTasks)
                         {
                             Console.WriteLine($"{task.Name} - {task.Description} - {task.Category} - {task.IsCompleted}");
