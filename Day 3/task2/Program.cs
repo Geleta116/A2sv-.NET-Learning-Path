@@ -28,7 +28,7 @@ namespace LibraryCatalog
             {
                 Console.WriteLine("There are No Books left in this Library");
             } else {
-                            
+                     
             Books.Remove(book);
             }
         }
@@ -48,7 +48,6 @@ namespace LibraryCatalog
                 MediaItems.Remove(item);
             }
         }
-
         public  void PrintCatalog()
         {
             if(Books.Count == 0) {
@@ -64,7 +63,6 @@ namespace LibraryCatalog
             }
             if(MediaItems.Count == 0) {
                 Console.WriteLine("There are no more Media Items left in the library");
-
             } else {
             Console.WriteLine();
             Console.WriteLine("Here are the Media Items in the Library");
@@ -72,11 +70,8 @@ namespace LibraryCatalog
             {
                 Console.WriteLine($"Media Title: {mediaItem.Title} , type: {mediaItem.MediaType} , Duration: {mediaItem.Duration}");
             }
-            }
-            
+            }  
         }
-        
-
     } 
     public class Book
     {
@@ -117,11 +112,12 @@ namespace LibraryCatalog
         Book George = new Book(Title: "1984", Author: "George Orwell " ,ISBN: "12982", PublicationYear: 1949 );
         MediaItem dvd = new MediaItem(Title: "ATOMIC HABIT AUDIO BOOK", MediaType: "DVD", Duration: 50);
         Library Abrehot = new Library(Name:"Abrehot", Address: "Addis ABABA", Books: new List<Book>(), MediaItems: new List<MediaItem>());
+
         Abrehot.AddBook(AtomicHabit);
         Abrehot.AddBook(George);
         Abrehot.RemoveBook(George);
-        Abrehot.RemoveBook(AtomicHabit);
-        Abrehot.RemoveBook(George);
+        // Abrehot.RemoveBook(AtomicHabit);
+        // Abrehot.RemoveBook(George);
         Abrehot.AddMediaItem(dvd);
         Abrehot.PrintCatalog();
     }
