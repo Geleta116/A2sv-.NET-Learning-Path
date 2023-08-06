@@ -60,6 +60,9 @@ namespace UserManagementSystem
                     case 5:
                         await DeleteStudentMenu();
                         break;
+                    case 6:
+                        running = false;
+                        break;
                     default:
                         break;
                 }
