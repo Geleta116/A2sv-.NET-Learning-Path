@@ -64,6 +64,7 @@ namespace UserManagementSystem
                         running = false;
                         break;
                     default:
+                        Console.WriteLine("Please choose again");
                         break;
                 }
             }
@@ -155,7 +156,7 @@ namespace UserManagementSystem
         private static async Task GetStudentByNameMenu()
         {
             Console.WriteLine("Enter Student Name");
-            string name = Console.ReadLine();
+            string? name = Console.ReadLine();
             if (string.IsNullOrWhiteSpace(name) || !Regex.IsMatch(name, @"^[a-zA-Z\s]+$"))
             {
                 Console.WriteLine(">>>>>>>>>>>>>");

@@ -122,7 +122,7 @@ public class StudentList<T> where T : Student
         catch (Exception ex)
         {
             Console.WriteLine("Error occurred while saving the student: " + ex.Message);
-            // Handle the exception appropriately
+            
         }
     }
   
@@ -157,7 +157,7 @@ public class StudentList<T> where T : Student
     }
     catch (Exception ex)
     {
-        // Handle exceptions (e.g., file not found, JSON parsing error)
+        
         Console.WriteLine("An error occurred: " + ex.Message);
     }
 }
