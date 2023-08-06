@@ -34,7 +34,7 @@ namespace UserManagementSystem
                 if (!int.TryParse(Console.ReadLine(), out int choice) || choice < 0)
                 {
                     Console.WriteLine(">>>>>>>>>>>>>>>>>>>>");
-                    Console.WriteLine("Invalid Roll Number");
+                    Console.WriteLine("Invalid Entry");
                     Console.WriteLine(">>>>>>>>>>>>>>>>>>>>");
                     
                 }
