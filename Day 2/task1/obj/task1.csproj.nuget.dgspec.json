@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/geleta/Desktop/A2sv-.NET-Learning-Path/task1/task1.csproj": {}
+    "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Day 2/task1/task1.csproj": {}
   },
   "projects": {
-    "/home/geleta/Desktop/A2sv-.NET-Learning-Path/task1/task1.csproj": {
+    "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Day 2/task1/task1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/task1/task1.csproj",
+        "projectUniqueName": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Day 2/task1/task1.csproj",
         "projectName": "task1",
-        "projectPath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/task1/task1.csproj",
+        "projectPath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Day 2/task1/task1.csproj",
         "packagesPath": "/home/geleta/.nuget/packages/",
-        "outputPath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/task1/obj/",
+        "outputPath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Day 2/task1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/geleta/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
             "NUnit": {
               "target": "Package",
               "version": "[3.13.3, )"

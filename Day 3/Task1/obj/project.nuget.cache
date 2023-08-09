@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "bi1JMAynmxd/+Fp2OScW590nxBfGOn016Zoogkx2veE57muMHA+wckb/jRSKYF+eoWO1yEHq40zaqh3XI1U7Mg==",
+  "dgSpecHash": "pyVHypYV3ZuFTm6WRcW3qlUEo/HbzdZWMKNQNxlJTtnOQB5f65S4Ylp4dWFkVjwVkz6kviq7vzh3i3XtMzer1Q==",
   "success": true,
   "projectFilePath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Day 3/Task1/Task1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/geleta/.nuget/packages/microsoft.entityframeworkcore/7.0.9/microsoft.entityframeworkcore.7.0.9.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.9/microsoft.entityframeworkcore.abstractions.7.0.9.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.9/microsoft.entityframeworkcore.analyzers.7.0.9.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.logging/7.0.0/microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

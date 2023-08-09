@@ -1,0 +1,103 @@
+using Microsoft.EntityFrameworkCore;
+using PostgresDb.Data;
+using PostgresDb.Models;
+using Xunit;
+
+namespace PostgresDb.Tests
+{
+    public class PostManagerTests
+    {
+        private DbContextOptions<ApiDbContext> GetDbContextOptions()
+        {
+            return new DbContextOptionsBuilder<ApiDbContext>()
+                .UseInMemoryDatabase(databaseName: "TestDatabase")
+                .Options;
+        }
+
+        [Fact]
+        public void CreatePost_ReturnsNonNullPost()
+        {
+            // Arrange
+            using (var context = new ApiDbContext(GetDbContextOptions()))
+            {
+                var postManager = new PostManager(context);
+                var title = "Test Post";
+                var content = "Test Content";
+
+                // Act
+                var result = postManager.CreatePost(title, content);
+
+                // Assert
+                Assert.NotNull(result);
+                Assert.Equal(title, result.Title);
+                Assert.Equal(content, result.Content);
+            }
+        }
+
+        [Fact]
+        public void GetPostById_ReturnsPostWithMatchingId()
+        {
+            // Arrange
+            using (var context = new ApiDbContext(GetDbContextOptions()))
+            {
+                var postManager = new PostManager(context);
+                var post = new Post { Title = "Test Post", Content = "Test Content" };
+                context.Posts.Add(post);
+                context.SaveChanges();
+
+                // Act
+                var result = postManager.GetPostById(post.PostId);
+
+                // Assert
+                Assert.NotNull(result);
+                Assert.Equal(post.PostId, result.PostId);
+                Assert.Equal(post.Title, result.Title);
+                Assert.Equal(post.Content, result.Content);
+            }
+        }
+
+        [Fact]
+        public void UpdatePost_UpdatesPostTitleAndContent()
+        {
+            // Arrange
+            using (var context = new ApiDbContext(GetDbContextOptions()))
+            {
+                var postManager = new PostManager(context);
+                var post = new Post { Title = "Initial Title", Content = "Initial Content" };
+                context.Posts.Add(post);
+                context.SaveChanges();
+
+                var updatedTitle = "Updated Title";
+                var updatedContent = "Updated Content";
+
+                // Act
+                var result = postManager.UpdatePost(post.PostId, updatedTitle, updatedContent);
+
+                // Assert
+                Assert.NotNull(result);
+                Assert.Equal(updatedTitle, result.Title);
+                Assert.Equal(updatedContent, result.Content);
+            }
+        }
+
+        [Fact]
+        public void UpdatePost_ReturnsNullIfPostNotFound()
+        {
+            // Arrange
+            using (var context = new ApiDbContext(GetDbContextOptions()))
+            {
+                var postManager = new PostManager(context);
+                var nonExistingId = 999;
+                var updatedTitle = "Updated Title";
+                var updatedContent = "Updated Content";
+
+                // Act
+                var result = postManager.UpdatePost(nonExistingId, updatedTitle, updatedContent);
+
+                // Assert
+                Assert.Null(result);
+            }
+        }
+  
+}
+}

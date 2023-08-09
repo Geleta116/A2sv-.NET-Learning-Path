@@ -1,9 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "hS6836WmsBNz+EY0K6CwuJQrG017mb3ep/2tS/ZNa3kjL5Aqat2jwzU5Q1scghuf8h36SQdRWuyM/EJaqmazsg==",
+  "dgSpecHash": "WBvsMraKzmTTC0SxN4/kn/YfbAB7e6RDYvya7ZsBgngHNbB8IO8MR35AbhNC0ThfoOw9RgcVmzD5hlP09igJag==",
   "success": true,
-  "projectFilePath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/task3/task3.csproj",
+  "projectFilePath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Day 2/task3/task3.csproj",
   "expectedPackageFiles": [
+    "/home/geleta/.nuget/packages/microsoft.entityframeworkcore/7.0.9/microsoft.entityframeworkcore.7.0.9.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.9/microsoft.entityframeworkcore.abstractions.7.0.9.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.9/microsoft.entityframeworkcore.analyzers.7.0.9.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.logging/7.0.0/microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "/home/geleta/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/home/geleta/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
     "/home/geleta/.nuget/packages/nunit/3.13.3/nunit.3.13.3.nupkg.sha512"

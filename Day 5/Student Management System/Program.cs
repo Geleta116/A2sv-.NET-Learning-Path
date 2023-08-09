@@ -13,7 +13,6 @@ namespace UserManagementSystem
             Console.WriteLine("----------------------------------------");
             Console.WriteLine("WELCOME TO THE STUDENT MANAGEMENT SYSTEM");
             Console.WriteLine("----------------------------------------");
-
             while (running)
             {
                 Console.WriteLine();
@@ -69,7 +68,6 @@ namespace UserManagementSystem
                 }
             }
         }
-
         private static async Task AddStudentMenu(StudentList<Student> studentList)
         {
             Console.WriteLine();
@@ -115,7 +113,6 @@ namespace UserManagementSystem
             
 
         }
-
         private static async Task GetAllStudentsMenu(StudentList<Student> studentList)
         {
             Console.WriteLine("************");
@@ -127,7 +124,6 @@ namespace UserManagementSystem
                 Console.WriteLine($"Name: {student.Name}, Age: {student.Age}, Roll Number: {student.RollNumber}, Grade: {student.Grade}");
             }
         }
-
         private static async Task GetStudentByRollNumberMenu()
         {
             Console.WriteLine("Enter Student Roll Number");
@@ -152,7 +148,6 @@ namespace UserManagementSystem
                 Console.WriteLine("...................");
             }
         }
-
         private static async Task GetStudentByNameMenu()
         {
             Console.WriteLine("Enter Student Name");
@@ -164,7 +159,6 @@ namespace UserManagementSystem
                 Console.WriteLine(">>>>>>>>>>>>>");
                 return;
             }
-
             StudentList<Student> studentList = new StudentList<Student>();
             Student? student = await studentList.GetStudentByName(name);
             if (student != null)
@@ -178,7 +172,6 @@ namespace UserManagementSystem
                 Console.WriteLine(".................");
             }
         }
-
         private static async Task DeleteStudentMenu()
         {
             Console.WriteLine("Enter Student Roll Number");
@@ -189,13 +182,8 @@ namespace UserManagementSystem
                 Console.WriteLine(">>>>>>>>>>>>>>>>>>>");
                 return;
             }
-
             StudentList<Student> studentList = new StudentList<Student>();
             await studentList.DeleteStudent(rollNumber);
         }
-
-
-
     }
-
 }

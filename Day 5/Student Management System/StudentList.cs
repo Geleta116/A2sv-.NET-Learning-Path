@@ -47,13 +47,11 @@ public class StudentList<T> where T : Student
             Console.WriteLine(e);
         }
     }
-
     public async Task<List<T>> GetAllStudents()
     {
         await ReadStudentsToList();
         return studentList;
     }
-
     public async Task<T?> GetStudentByName(string name)
     {
         await ReadStudentsToList();
@@ -63,7 +61,6 @@ public class StudentList<T> where T : Student
                      select s).FirstOrDefault();
         return student;
     }
-
     public async Task<T?> GetStudentByRollNumber(int rollNumber)
     {
         try{
@@ -79,7 +76,6 @@ public class StudentList<T> where T : Student
             return null;
         }
     }
-
     public async Task DeleteStudent(int? rollNumber)
     {
         await ReadStudentsToList();
@@ -125,41 +121,37 @@ public class StudentList<T> where T : Student
             
         }
     }
-  
-    
-
     private async Task ReadStudentsToList()
-{
-    try
     {
-        var text = await File.ReadAllTextAsync("student.data.json");
-        var jsonDocument = JsonDocument.Parse(text);
-
-        studentList.Clear();
-
-        foreach (var jsonElement in jsonDocument.RootElement.EnumerateArray())
+        try
         {
-            var name = jsonElement.GetProperty("Name").GetString();
-            var age = jsonElement.GetProperty("Age").GetInt32();
-            var rollNumber = jsonElement.GetProperty("RollNumber").GetInt32();
-            var grade = jsonElement.GetProperty("Grade").GetString();
+            var text = await File.ReadAllTextAsync("student.data.json");
+            var jsonDocument = JsonDocument.Parse(text);
+            studentList.Clear();
 
-            var student = new Student
-            (
-                name : name,
-                age : age,
-                rollNumber : rollNumber,
-                grade : char.Parse(grade)
-            );
+            foreach (var jsonElement in jsonDocument.RootElement.EnumerateArray())
+            {
+                var name = jsonElement.GetProperty("Name").GetString();
+                var age = jsonElement.GetProperty("Age").GetInt32();
+                var rollNumber = jsonElement.GetProperty("RollNumber").GetInt32();
+                var grade = jsonElement.GetProperty("Grade").GetString();
+
+                var student = new Student
+                (
+                    name : name,
+                    age : age,
+                    rollNumber : rollNumber,
+                    grade : char.Parse(grade)
+                );
+                
+                studentList.Add((T)student);
+            }
+        }
+        catch (Exception ex)
+        {
             
-            studentList.Add((T)student);
+            Console.WriteLine("An error occurred: " + ex.Message);
         }
     }
-    catch (Exception ex)
-    {
-        
-        Console.WriteLine("An error occurred: " + ex.Message);
-    }
-}
 }
    
