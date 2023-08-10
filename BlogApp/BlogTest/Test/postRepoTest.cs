@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using PostgresDb.Data;
-using PostgresDb.Models;
+using BlogApi.Data;
+using BlogApi.models;
 using Xunit;
 
 namespace PostgresDb.Tests
@@ -17,17 +17,14 @@ namespace PostgresDb.Tests
         [Fact]
         public void CreatePost_ReturnsNonNullPost()
         {
-            
             using (var context = new ApiDbContext(GetDbContextOptions()))
             {
                 var postManager = new PostManager(context);
                 var title = "Test Post";
                 var content = "Test Content";
 
-                
                 var result = postManager.CreatePost(title, content);
 
-                
                 Assert.NotNull(result);
                 Assert.Equal(title, result.Title);
                 Assert.Equal(content, result.Content);
@@ -37,7 +34,6 @@ namespace PostgresDb.Tests
         [Fact]
         public void GetPostById_ReturnsPostWithMatchingId()
         {
-            
             using (var context = new ApiDbContext(GetDbContextOptions()))
             {
                 var postManager = new PostManager(context);
@@ -45,10 +41,8 @@ namespace PostgresDb.Tests
                 context.Posts.Add(post);
                 context.SaveChanges();
 
-                
                 var result = postManager.GetPostById(post.PostId);
 
-                
                 Assert.NotNull(result);
                 Assert.Equal(post.PostId, result.PostId);
                 Assert.Equal(post.Title, result.Title);
@@ -59,7 +53,6 @@ namespace PostgresDb.Tests
         [Fact]
         public void UpdatePost_UpdatesPostTitleAndContent()
         {
-            
             using (var context = new ApiDbContext(GetDbContextOptions()))
             {
                 var postManager = new PostManager(context);
@@ -70,10 +63,8 @@ namespace PostgresDb.Tests
                 var updatedTitle = "Updated Title";
                 var updatedContent = "Updated Content";
 
-                
                 var result = postManager.UpdatePost(post.PostId, updatedTitle, updatedContent);
 
-                
                 Assert.NotNull(result);
                 Assert.Equal(updatedTitle, result.Title);
                 Assert.Equal(updatedContent, result.Content);
@@ -83,7 +74,6 @@ namespace PostgresDb.Tests
         [Fact]
         public void UpdatePost_ReturnsNullIfPostNotFound()
         {
-            
             using (var context = new ApiDbContext(GetDbContextOptions()))
             {
                 var postManager = new PostManager(context);
@@ -91,13 +81,10 @@ namespace PostgresDb.Tests
                 var updatedTitle = "Updated Title";
                 var updatedContent = "Updated Content";
 
-                
                 var result = postManager.UpdatePost(nonExistingId, updatedTitle, updatedContent);
 
-                
                 Assert.Null(result);
             }
         }
-  
-}
+    }
 }

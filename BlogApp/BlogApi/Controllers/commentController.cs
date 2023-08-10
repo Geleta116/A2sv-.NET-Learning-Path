@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using PostgresDb.Data;
-using PostgresDb.Models;
+using BlogApi.Data;
+using BlogApi.models;
 using System;
 
 namespace Blog.Controllers
@@ -64,6 +64,6 @@ namespace Blog.Controllers
     public class CommentRequestModel
     {
         public string Text { get; set; }
-        public int Postid { get; set;}
+        public int Postid { get; set; }
     }
 }

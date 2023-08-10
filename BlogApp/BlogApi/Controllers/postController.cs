@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using PostgresDb.Data;
-using PostgresDb.Models;
+using BlogApi.Data;
+using BlogApi.models;
 
 namespace Blog.Controllers
 {

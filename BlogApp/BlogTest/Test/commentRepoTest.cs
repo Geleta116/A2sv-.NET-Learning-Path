@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using PostgresDb.Data;
-using PostgresDb.Models;
+using BlogApi.Data;
+using BlogApi.models;
 using Xunit;
 
 namespace PostgresDb.Tests
@@ -17,17 +17,14 @@ namespace PostgresDb.Tests
         [Fact]
         public void CreateComment_ReturnsNonNullComment()
         {
-            
             using (var context = new ApiDbContext(GetDbContextOptions()))
             {
                 var commentManager = new CommentManager(context);
                 var text = "Test Comment";
                 var postId = 1;
 
-                
                 var result = commentManager.CreateComment(text, postId);
 
-                
                 Assert.NotNull(result);
                 Assert.Equal(text, result.Text);
                 Assert.Equal(postId, result.PostId);
@@ -37,7 +34,6 @@ namespace PostgresDb.Tests
         [Fact]
         public void GetCommentById_ReturnsCommentWithMatchingId()
         {
-            
             using (var context = new ApiDbContext(GetDbContextOptions()))
             {
                 var commentManager = new CommentManager(context);
@@ -45,10 +41,8 @@ namespace PostgresDb.Tests
                 context.Comments.Add(comment);
                 context.SaveChanges();
 
-                
                 var result = commentManager.GetCommentById(comment.CommentId);
 
-                
                 Assert.NotNull(result);
                 Assert.Equal(comment.CommentId, result.CommentId);
                 Assert.Equal(comment.Text, result.Text);
@@ -59,7 +53,6 @@ namespace PostgresDb.Tests
         [Fact]
         public void UpdateComment_UpdatesCommentText()
         {
-            
             using (var context = new ApiDbContext(GetDbContextOptions()))
             {
                 var commentManager = new CommentManager(context);
@@ -69,10 +62,8 @@ namespace PostgresDb.Tests
 
                 var updatedText = "Updated Comment Text";
 
-                
                 var result = commentManager.UpdateComment(comment.CommentId, updatedText);
 
-                
                 Assert.NotNull(result);
                 Assert.Equal(updatedText, result.Text);
             }
@@ -81,17 +72,14 @@ namespace PostgresDb.Tests
         [Fact]
         public void UpdateComment_ReturnsNullIfCommentNotFound()
         {
-            
             using (var context = new ApiDbContext(GetDbContextOptions()))
             {
                 var commentManager = new CommentManager(context);
                 var nonExistingId = 999;
                 var updatedText = "Updated Comment Text";
 
-                
                 var result = commentManager.UpdateComment(nonExistingId, updatedText);
 
-                
                 Assert.Null(result);
             }
         }
@@ -99,7 +87,6 @@ namespace PostgresDb.Tests
         [Fact]
         public void DeleteCommentById_RemovesCommentFromDatabase()
         {
-            
             using (var context = new ApiDbContext(GetDbContextOptions()))
             {
                 var commentManager = new CommentManager(context);
@@ -107,10 +94,8 @@ namespace PostgresDb.Tests
                 context.Comments.Add(comment);
                 context.SaveChanges();
 
-                
                 var result = commentManager.DeleteCommentById(comment.CommentId);
 
-                
                 Assert.True(result);
                 Assert.Null(context.Comments.Find(comment.CommentId));
             }
@@ -119,34 +104,27 @@ namespace PostgresDb.Tests
         [Fact]
         public void DeleteCommentById_ReturnsFalseIfCommentNotFound()
         {
-            
             using (var context = new ApiDbContext(GetDbContextOptions()))
             {
                 var commentManager = new CommentManager(context);
                 var nonExistingId = 999;
 
-                
                 var result = commentManager.DeleteCommentById(nonExistingId);
 
-                
                 Assert.False(result);
             }
         }
 
-        
         [Fact]
         public void GetCommentById_ReturnsNullOnException()
         {
-            
             using (var context = new ApiDbContext(GetDbContextOptions()))
             {
                 var commentManager = new CommentManager(context);
                 var invalidId = -1;
 
-                
                 var result = commentManager.GetCommentById(invalidId);
 
-                
                 Assert.Null(result);
             }
         }

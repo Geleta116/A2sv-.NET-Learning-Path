@@ -2,18 +2,21 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using PostgresDb.Data;
+using BlogApi.Data;
 
 #nullable disable
 
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    partial class ApiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230809102305_ChangeCommentIdDataType")]
+    partial class ChangeCommentIdDataType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,7 +25,7 @@ namespace WebApplication1.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("PostgresDb.Models.Comment", b =>
+            modelBuilder.Entity("BlogApi.models.Comment", b =>
                 {
                     b.Property<int>("CommentId")
                         .ValueGeneratedOnAdd()
@@ -46,7 +49,7 @@ namespace WebApplication1.Migrations
                     b.ToTable("Comments");
                 });
 
-            modelBuilder.Entity("PostgresDb.Models.Post", b =>
+            modelBuilder.Entity("BlogApi.models.Post", b =>
                 {
                     b.Property<int>("PostId")
                         .ValueGeneratedOnAdd()
@@ -70,9 +73,9 @@ namespace WebApplication1.Migrations
                     b.ToTable("Posts");
                 });
 
-            modelBuilder.Entity("PostgresDb.Models.Comment", b =>
+            modelBuilder.Entity("BlogApi.models.Comment", b =>
                 {
-                    b.HasOne("PostgresDb.Models.Post", "Post")
+                    b.HasOne("BlogApi.models.Post", "Post")
                         .WithMany("Comments")
                         .HasForeignKey("PostId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -82,7 +85,7 @@ namespace WebApplication1.Migrations
                     b.Navigation("Post");
                 });
 
-            modelBuilder.Entity("PostgresDb.Models.Post", b =>
+            modelBuilder.Entity("BlogApi.models.Post", b =>
                 {
                     b.Navigation("Comments");
                 });

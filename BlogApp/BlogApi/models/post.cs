@@ -2,13 +2,13 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PostgresDb.Models
+namespace BlogApi.models
 {
-    public class Post 
+    public class Post
     {
         public Post()
         {
-             Comments = new HashSet<Comment>();
+            Comments = new HashSet<Comment>();
         }
 
         [Key]
@@ -18,6 +18,6 @@ namespace PostgresDb.Models
         public string Content { get; set; } = null!;
         public DateTime CreatedAt { get; set; }
 
-        public virtual ICollection<Comment> Comments{get; set;}
+        public virtual ICollection<Comment> Comments { get; set; }
     }
 }

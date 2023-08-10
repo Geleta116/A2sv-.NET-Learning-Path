@@ -1,8 +1,6 @@
 using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
-using PostgresDb.Data;
-
-
+using BlogApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,41 +9,37 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddEntityFrameworkNpgsql()
-                .AddDbContext<ApiDbContext>(opt => opt.UseNpgsql(builder.Configuration.GetConnectionString("SampleDbConnection")));
+builder.Services
+    .AddEntityFrameworkNpgsql()
+    .AddDbContext<ApiDbContext>(
+        opt => opt.UseNpgsql(builder.Configuration.GetConnectionString("SampleDbConnection"))
+    );
 
-builder.Services.AddControllers()
-.AddJsonOptions(options =>
-        {
-            options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
-        });
+builder.Services
+    .AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+    });
 
 var app = builder.Build();
 app.UseRouting();
 app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapControllers();
-        });
-
-
-    
-        
-
-
+{
+    endpoints.MapControllers();
+});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
- {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-    c.RoutePrefix = "";
- });
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+        c.RoutePrefix = "";
+    });
 }
 
 app.UseHttpsRedirection();
 
 app.Run();
-
-
