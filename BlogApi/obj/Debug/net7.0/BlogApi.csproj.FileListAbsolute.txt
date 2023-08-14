@@ -1,0 +1,6 @@
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/BlogApi/obj/Debug/net7.0/BlogApi.csproj.AssemblyReference.cache
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/BlogApi/obj/Debug/net7.0/BlogApi.GeneratedMSBuildEditorConfig.editorconfig
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/BlogApi/obj/Debug/net7.0/BlogApi.AssemblyInfoInputs.cache
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/BlogApi/obj/Debug/net7.0/BlogApi.AssemblyInfo.cs
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/BlogApi/obj/Debug/net7.0/BlogApi.csproj.CoreCompileInputs.cache
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/BlogApi/obj/Debug/net7.0/BlogApi.MvcApplicationPartsAssemblyInfo.cache

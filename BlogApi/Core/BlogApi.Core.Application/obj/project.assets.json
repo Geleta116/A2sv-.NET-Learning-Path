@@ -1,0 +1,89 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "BlogApi.core.domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/BlogApi.core.domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogApi.core.domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BlogApi.core.domain/1.0.0": {
+      "type": "project",
+      "path": "../BlogApi.Core.domain/BlogApi.core.domain.csproj",
+      "msbuildProject": "../BlogApi.Core.domain/BlogApi.core.domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "BlogApi.core.domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/geleta/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/BlogApi/Core/BlogApi.Core.Application/BlogApi.Core.Application.csproj",
+      "projectName": "BlogApi.Core.Application",
+      "projectPath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/BlogApi/Core/BlogApi.Core.Application/BlogApi.Core.Application.csproj",
+      "packagesPath": "/home/geleta/.nuget/packages/",
+      "outputPath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/BlogApi/Core/BlogApi.Core.Application/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/geleta/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "/home/geleta/Desktop/A2sv-.NET-Learning-Path/BlogApi/Core/BlogApi.Core.domain/BlogApi.core.domain.csproj": {
+              "projectPath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/BlogApi/Core/BlogApi.Core.domain/BlogApi.core.domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
