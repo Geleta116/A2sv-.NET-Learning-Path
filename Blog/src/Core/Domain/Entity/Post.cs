@@ -10,10 +10,8 @@ namespace  BlogApi.Core.Domain.Entity
         {
             Comments = new HashSet<Comment>();
         }
-
         public string Title { get; set; } = null!;
         public string Content { get; set; } = null!;
-
         public virtual ICollection<Comment> Comments { get; set; }
     }
 }
