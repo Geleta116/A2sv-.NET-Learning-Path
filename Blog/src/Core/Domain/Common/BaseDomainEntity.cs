@@ -1,10 +1,13 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class BaseDomainEntity
+namespace BlogApi.Core.Domain.Entity.Common
 {
-    [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int Id { get; set; }
-    public DateTime CreatedAt { get; set; }
+    public  abstract class BaseDomainEntity
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+        public DateTime CreatedAt { get; set; }
+    }
 }

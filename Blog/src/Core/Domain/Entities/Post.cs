@@ -1,8 +1,8 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
-namespace  BlogApi.Core.Domain.Entity
+using BlogApi.Core.Domain.Entity.Common;
+namespace BlogApi.Core.Domain.Entity
 {
     public class Post : BaseDomainEntity
     {
@@ -10,6 +10,7 @@ namespace  BlogApi.Core.Domain.Entity
         {
             Comments = new HashSet<Comment>();
         }
+
         public string Title { get; set; } = null!;
         public string Content { get; set; } = null!;
         public virtual ICollection<Comment> Comments { get; set; }
