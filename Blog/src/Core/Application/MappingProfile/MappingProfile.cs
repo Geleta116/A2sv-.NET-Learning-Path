@@ -1,10 +1,10 @@
 using AutoMapper;
 
 
-namespace BlogApi.Core.Application.MappingProfile
+namespace Blog.src.Core.Application.MappingProfile
 {
     public class MappingProfile: Profile
     {
-
+        
     }
 } 
