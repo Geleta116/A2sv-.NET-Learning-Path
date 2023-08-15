@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BlogApi.Core.Domain.Entity.Common
+namespace Blog.src.Core.Domain.Entity.Common
 {
     public  abstract class BaseDomainEntity
     {

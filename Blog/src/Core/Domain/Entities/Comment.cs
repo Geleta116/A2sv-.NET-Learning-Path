@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using BlogApi.Core.Domain.Entity.Common;
+using Blog.src.Core.Domain.Entity.Common;
 
-namespace BlogApi.Core.Domain.Entity
+namespace Blog.src.Core.Domain.Entity
 {
     public class Comment : BaseDomainEntity
     {
