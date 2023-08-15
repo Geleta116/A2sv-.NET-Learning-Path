@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace  BlogApi.Core.Domain.Entity
 {
-    public class Post : BaseFeature
+    public class Post : BaseDomainEntity
     {
         public Post()
         {

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BlogApi.Core.Domain.Entity
 {
-    public class Comment: BaseFeature
+    public class Comment: BaseDomainEntity
     {
         public virtual Post Post { get; set; } = null!;
         public int PostId { get; set; }

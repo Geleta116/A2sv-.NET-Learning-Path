@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/Core/Domain/Domain.csproj",
+      "projectUniqueName": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Core/Domain/Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/Core/Domain/Domain.csproj",
+      "projectPath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Core/Domain/Domain.csproj",
       "packagesPath": "/home/geleta/.nuget/packages/",
-      "outputPath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/Core/Domain/obj/",
+      "outputPath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Core/Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/geleta/.nuget/NuGet/NuGet.Config"

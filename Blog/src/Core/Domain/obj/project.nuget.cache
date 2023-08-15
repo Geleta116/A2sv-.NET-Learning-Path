@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kOlYGhRUaI4iwprpNyB4Q/cKLuVUfV3sVLm7uz8M65Xx1fdJ8M3wikRz1kC53n/gHK8qO4z5KcJ5CMNLsvIg8Q==",
+  "dgSpecHash": "1blziDlQCIYnN9YGAwstIQFWmF1cpZDy+vO4rKvJBrCfVpF9V4WkpGqf+MlKTcj3TwrsAdZpjFLApalPPhGmHg==",
   "success": true,
-  "projectFilePath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/Core/Domain/Domain.csproj",
+  "projectFilePath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Core/Domain/Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

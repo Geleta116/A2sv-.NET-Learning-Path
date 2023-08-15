@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "jgiMQrMCaql7AAJGj+US84zfUNw8Ehubh1VbGgvePD43AtGGBjggMVaFc3iQad0uDfbNB+orF9rjj+Bsk5ax2w==",
+  "dgSpecHash": "1cSfxbAxx4qX+LezL8jPteFXqmJHxHcuXK2xv3gkl8Tmyj2Vo1oY+rvTxBKp6MqVWvaPmBLqlyCIUN0m2mChPg==",
   "success": true,
-  "projectFilePath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/Core/Application/Application.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Core/Application/Application.csproj",
+  "expectedPackageFiles": [
+    "/home/geleta/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/home/geleta/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/home/geleta/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
