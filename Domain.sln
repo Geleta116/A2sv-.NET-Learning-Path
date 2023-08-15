@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Blog", "Blog", "{9D304884-2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{704FC30A-161E-4684-B104-92C7BF3175BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Blog\Core\Domain\Domain.csproj", "{CB9D6AD5-3ACA-4036-9E58-84112434E09E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Blog\src\Core\Domain\Domain.csproj", "{CB9D6AD5-3ACA-4036-9E58-84112434E09E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Blog\Core\Application\Application.csproj", "{07053283-2675-4EB3-831F-62B32580512B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Blog\src\Core\Application\Application.csproj", "{07053283-2675-4EB3-831F-62B32580512B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
