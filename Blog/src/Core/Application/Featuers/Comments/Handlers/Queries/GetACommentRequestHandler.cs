@@ -4,7 +4,7 @@ using Blog.src.Core.Application.Features.COmments.Requests.Queries;
 using Blog.src.Core.Application.Persistance.Contracts;
 using MediatR;
 
-namespace Blog.src.Core.Application.Features.Comments.Queries
+namespace Blog.src.Core.Application.Features.Comments.Handlers.Queries
 {
     public class GetACommentRequestHandler : IRequestHandler<GetACommentRequest, CommentDto>
     {

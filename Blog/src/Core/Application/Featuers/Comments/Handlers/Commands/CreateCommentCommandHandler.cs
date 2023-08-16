@@ -5,26 +5,26 @@ using Blog.src.Core.Application.Persistance.Contracts;
 using Blog.src.Core.Domain.Entity;
 using MediatR;
 
-namespace Blog.src.Core.Application.Features.Comments.Commands
+namespace Blog.src.Core.Application.Features.Comments.Handlers.Commands
 {
-    public class DeleteCommentRequestHandler : IRequestHandler<DeleteCommentRequest, CommentDto>
+    public class CreateCommentsCommandHandler : IRequestHandler<CreateCommentsCommand, CommentDto>
     {
         private readonly ICommentRepository _CommentRepository;
         private readonly IMapper _mapper;
 
-        public DeleteCommentRequestHandler(ICommentRepository CommentRepository, IMapper mapper)
+        public CreateCommentsCommandHandler(ICommentRepository CommentRepository, IMapper mapper)
         {
             _CommentRepository = CommentRepository;
             _mapper = mapper;
         }
 
         public async Task<CommentDto> Handle(
-            DeleteCommentRequest request,
+            CreateCommentsCommand Command,
             CancellationToken cancellationToken
         )
         {
-            var deletedComment = await _CommentRepository.DeleteAsync(request.Id);
-            return _mapper.Map<CommentDto>(deletedComment);
+            var createdComment = await _CommentRepository.AddAsync(_mapper.Map<Comment>(Command));
+            return _mapper.Map<CommentDto>(createdComment);
         }
     }
 }

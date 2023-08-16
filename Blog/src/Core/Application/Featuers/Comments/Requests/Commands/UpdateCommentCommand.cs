@@ -3,8 +3,8 @@ using MediatR;
 
 namespace Blog.src.Core.Application.Features.Comments.Requests.Commands
 {
-    public class DeleteCommentRequest : IRequest<CommentDto>
+    public class UpdateCommentCommand : IRequest<CommentDto>
     {
-        public int Id { get; set; }
+        public required UpdateCommentDto UpdateCommentDto { get; set; }
     }
 }

@@ -4,7 +4,7 @@ using Blog.src.Core.Application.Features.Posts.Requests.Queries;
 using Blog.src.Core.Application.Persistance.Contracts;
 using MediatR;
 
-namespace Blog.src.Core.Application.Features.Comments.Queries
+namespace Blog.src.Core.Application.Features.Comments.Handlers.Queries
 {
     public class GetAllCommentsRequestHandler
         : IRequestHandler<GetAllCommentsRequest, List<CommentDto>>
@@ -23,7 +23,7 @@ namespace Blog.src.Core.Application.Features.Comments.Queries
             CancellationToken cancellationToken
         )
         {
-            var allComments = await _CommentRepository.GetAllAsync();
+            var allComments = await _CommentRepository.GetAllCommentsAsync(request.postId);
             return _mapper.Map<List<CommentDto>>(allComments);
         }
     }

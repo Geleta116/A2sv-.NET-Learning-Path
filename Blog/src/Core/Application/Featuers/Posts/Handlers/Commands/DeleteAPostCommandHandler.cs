@@ -7,24 +7,24 @@ using MediatR;
 
 namespace Blog.src.Core.Application.Features.Posts.Commands
 {
-    public class CreatePostsRequestHandler : IRequestHandler<CreatePostsRequest, PostDto>
+    public class DeletePostCommandHandler : IRequestHandler<DeletePostCommand, PostDto>
     {
         private readonly IPostRepository _postRepository;
         private readonly IMapper _mapper;
 
-        public CreatePostsRequestHandler(IPostRepository postRepository, IMapper mapper)
+        public DeletePostCommandHandler(IPostRepository postRepository, IMapper mapper)
         {
             _postRepository = postRepository;
             _mapper = mapper;
         }
 
         public async Task<PostDto> Handle(
-            CreatePostsRequest request,
+            DeletePostCommand command,
             CancellationToken cancellationToken
         )
         {
-            var createdPost = await _postRepository.AddAsync(_mapper.Map<Post>(request));
-            return _mapper.Map<PostDto>(createdPost);
+            var deletedPost = await _postRepository.DeleteAsync(command.Id);
+            return _mapper.Map<PostDto>(deletedPost);
         }
     }
 }

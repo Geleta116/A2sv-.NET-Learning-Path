@@ -3,8 +3,8 @@ using MediatR;
 
 namespace Blog.src.Core.Application.Features.Posts.Requests.Commands
 {
-    public class UpdatePostRequest : IRequest<PostDto>
+    public class CreatePostCommand : IRequest<PostDto>
     {
-        public required UpdatePostDto UpdatePostDto { get; set; }
+        public required CreatePostDto CreatePostDto { get; set; }
     }
 }

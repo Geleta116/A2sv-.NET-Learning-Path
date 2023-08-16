@@ -7,23 +7,23 @@ using MediatR;
 
 namespace Blog.src.Core.Application.Features.Posts.Commands
 {
-    public class UpdatePostRequestHandler : IRequestHandler<UpdatePostRequest, PostDto>
+    public class UpdatePostCommandHandler : IRequestHandler<UpdatePostCommand, PostDto>
     {
         IPostRepository _postrepository;
         IMapper _iMapper;
 
-        public UpdatePostRequestHandler(IPostRepository postRepository, IMapper iMapper)
+        public UpdatePostCommandHandler(IPostRepository postRepository, IMapper iMapper)
         {
             _postrepository = postRepository;
             _iMapper = iMapper;
         }
 
         public async Task<PostDto> Handle(
-            UpdatePostRequest request,
+            UpdatePostCommand command,
             CancellationToken cancellationToken
         )
         {
-            var updatedPost = await _postrepository.UpdateAsync(_iMapper.Map<Post>(request));
+            var updatedPost = await _postrepository.UpdateAsync(_iMapper.Map<Post>(command));
             return _iMapper.Map<PostDto>(updatedPost);
         }
     }
