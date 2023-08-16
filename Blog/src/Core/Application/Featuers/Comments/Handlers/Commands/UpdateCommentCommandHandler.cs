@@ -1,5 +1,6 @@
 using AutoMapper;
 using Blog.src.Core.Application.DTOs.CommentDtos;
+using Blog.src.Core.Application.Exceptions;
 using Blog.src.Core.Application.Features.Comments.Requests.Commands;
 using Blog.src.Core.Application.Persistance.Contracts;
 using Blog.src.Core.Domain.Entity;
@@ -28,7 +29,7 @@ namespace Blog.src.Core.Application.Features.Comments.Handlers.Commands
             var validatedValue = await validator.ValidateAsync(command.UpdateCommentDto);
 
             if (validatedValue.IsValid)
-                throw new Exception();
+                throw new ValidationException(validatedValue);
 
             var theCommentToBeUpdated = await _Commentrepository.GetAsync(
                 command.UpdateCommentDto.Id

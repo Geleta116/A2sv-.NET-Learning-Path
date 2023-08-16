@@ -9,11 +9,17 @@ namespace Blog.src.Core.Application.Profiles
     {
         public MappingProfile()
         {
+            #region  comment
             CreateMap<Comment, CreateCommentDto>().ReverseMap();
-            CreateMap<Post, CreatePostDto>().ReverseMap();
-            CreateMap<PostDto, CreatePostDto>().ReverseMap();
             CreateMap<Comment, UpdateCommentDto>().ReverseMap();
+            #endregion
+
+            #region post
+            CreateMap<Post, CreatePostDto>().ReverseMap();
             CreateMap<Post, UpdatePostDto>().ReverseMap();
+            #endregion
+            
+           
         }
     }
 } 

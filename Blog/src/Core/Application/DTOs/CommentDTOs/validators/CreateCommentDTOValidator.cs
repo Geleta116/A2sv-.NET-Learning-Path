@@ -5,8 +5,8 @@ using FluentValidation;
 public class CreateCommentDtoValidator : AbstractValidator<CreateCommentDto>
 {
     private IPostRepository _IPostRepository;
-    public CreateCommentDtoValidator(IPostRepository IPostRepository)
 
+    public CreateCommentDtoValidator(IPostRepository IPostRepository)
     {
         _IPostRepository = IPostRepository;
 
@@ -20,22 +20,21 @@ public class CreateCommentDtoValidator : AbstractValidator<CreateCommentDto>
             .WithMessage("{proprtyName} can not exceed 50 characters");
 
         RuleFor(Comment => Comment.PostId)
-        .GreaterThan(0)
-        .MustAsync(async (id, token) =>
-        {
-            var postExists = await _IPostRepository.GetAsync(id);
-            if (postExists != null)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-
-        })
-        .WithMessage("{PropertyName} doesn't exist");
-    
-         
+            .GreaterThan(0)
+            .MustAsync(
+                async (id, token) =>
+                {
+                    var postExists = await _IPostRepository.GetAsync(id);
+                    if (postExists != null)
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+            )
+            .WithMessage("{PropertyName} doesn't exist");
     }
 }

@@ -1,5 +1,6 @@
 using AutoMapper;
 using Blog.src.Core.Application.DTOs.PostDtos;
+using Blog.src.Core.Application.Exceptions;
 using Blog.src.Core.Application.Features.Posts.Requests.Commands;
 using Blog.src.Core.Application.Persistance.Contracts;
 using Blog.src.Core.Domain.Entity;
@@ -28,7 +29,7 @@ namespace Blog.src.Core.Application.Features.Posts.Commands
             var validatedValue = await validator.ValidateAsync(command.CreatePostDto);
 
             if (validatedValue.IsValid)
-                throw new Exception();
+                throw new ValidationException(validatedValue);
                 
             var createdPost = await _postRepository.AddAsync(_mapper.Map<Post>(command));
             return _mapper.Map<PostDto>(createdPost);
