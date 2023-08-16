@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BlogApi.core.Application.persistance.Contracts
+namespace Blog.src.Core.Application.Persistance.Contracts
 {
     public interface IGenericRepository<T> where T : class
     {

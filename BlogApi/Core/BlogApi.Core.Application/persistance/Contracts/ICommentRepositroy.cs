@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using BlogApi.core.Application.persistance.Contracts;
+using Blog.src.Core.Application.Persistance.Contracts;
 using BlogApi.Core.Domain;
 
 
-namespace BlogApi.Core.Application.Persistance.Contracts
+namespace Blog.src.Core.Application.Persistance.Contracts
 {
     public interface ICommentRepository : IGenericRepository<Comment>
     {
