@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "01zO1aVz0bY4Vh8txcKnhGi/EebPSpdq8Ewt6P3T08QU9p1/rJUhSsaD+wG+KctzPPNAy1F/VRNITGDHcgg0fg==",
+  "dgSpecHash": "jSux3BZj2KD7Mu9P1YUZVbGCNTA0TGTeJahud/8VDXDzKfZAl3aTof5JuDGaV4hEXXC1MUCvqc331xUxlGAmYw==",
   "success": true,
   "projectFilePath": "/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Core/Application/Application.csproj",
   "expectedPackageFiles": [
     "/home/geleta/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/home/geleta/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "/home/geleta/.nuget/packages/fluentvalidation/11.7.1/fluentvalidation.11.7.1.nupkg.sha512",
+    "/home/geleta/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.7.1/fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
     "/home/geleta/.nuget/packages/mediatr/11.0.0/mediatr.11.0.0.nupkg.sha512",
     "/home/geleta/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
     "/home/geleta/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",

@@ -23,6 +23,13 @@ namespace Blog.src.Core.Application.Features.Posts.Commands
             CancellationToken cancellationToken
         )
         {
+            var validator = new CreatePostDtoValidator();
+
+            var validatedValue = await validator.ValidateAsync(command.CreatePostDto);
+
+            if (validatedValue.IsValid)
+                throw new Exception();
+                
             var createdPost = await _postRepository.AddAsync(_mapper.Map<Post>(command));
             return _mapper.Map<PostDto>(createdPost);
         }

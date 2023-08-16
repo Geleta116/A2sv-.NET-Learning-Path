@@ -3,6 +3,7 @@ using Blog.src.Core.Application.DTOs.PostDtos;
 using Blog.src.Core.Application.Features.Posts.Requests.Commands;
 using Blog.src.Core.Application.Persistance.Contracts;
 using Blog.src.Core.Domain.Entity;
+using FluentValidation;
 using MediatR;
 
 namespace Blog.src.Core.Application.Features.Posts.Commands
@@ -23,6 +24,12 @@ namespace Blog.src.Core.Application.Features.Posts.Commands
             CancellationToken cancellationToken
         )
         {
+             var validator = new UpdatePostDtoValidator();
+
+            var validatedValue = await validator.ValidateAsync(command.UpdatePostDto);
+
+            if (validatedValue.IsValid)
+                throw new Exception();
             var thePostToBeUpdated = await _postrepository.GetAsync(command.UpdatePostDto.Id);
             if (thePostToBeUpdated is null)
             {
