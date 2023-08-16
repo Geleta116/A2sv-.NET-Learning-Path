@@ -4,7 +4,7 @@ using MediatR;
 
 namespace Blog.src.Core.Application.Features.Posts.Requests.Queries
 {
-    public class GetAllCommentsRequest : IRequest<List<CommentDto>>
+    public class GetAllCommentsOfAPostRequest : IRequest<List<CommentDto>>
     {
         public int postId { get; set; }
     }

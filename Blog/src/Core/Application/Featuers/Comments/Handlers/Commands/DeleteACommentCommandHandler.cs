@@ -7,7 +7,7 @@ using MediatR;
 
 namespace Blog.src.Core.Application.Features.Comments.Handlers.Commands
 {
-    public class DeleteCommentCommandHandler : IRequestHandler<DeleteCommentCommand, CommentDto>
+    public class DeleteCommentCommandHandler : IRequestHandler<DeleteCommentCommand, Unit>
     {
         private readonly ICommentRepository _CommentRepository;
         private readonly IMapper _mapper;
@@ -18,13 +18,13 @@ namespace Blog.src.Core.Application.Features.Comments.Handlers.Commands
             _mapper = mapper;
         }
 
-        public async Task<CommentDto> Handle(
+        public async Task<Unit> Handle(
             DeleteCommentCommand command,
             CancellationToken cancellationToken
         )
         {
             var deletedComment = await _CommentRepository.DeleteAsync(command.Id);
-            return _mapper.Map<CommentDto>(deletedComment);
+            return Unit.Value;
         }
 
         

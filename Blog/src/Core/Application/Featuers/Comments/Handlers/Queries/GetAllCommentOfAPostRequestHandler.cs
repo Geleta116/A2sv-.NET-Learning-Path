@@ -6,25 +6,25 @@ using MediatR;
 
 namespace Blog.src.Core.Application.Features.Comments.Handlers.Queries
 {
-    public class GetAllCommentsRequestHandler
-        : IRequestHandler<GetAllCommentsRequest, List<CommentDto>>
+    public class GetAllCommentsOfAPostRequestHandler
+        : IRequestHandler<GetAllCommentsOfAPostRequest, List<CommentDto>>
     {
         private readonly ICommentRepository _CommentRepository;
         private readonly IMapper _mapper;
 
-        public GetAllCommentsRequestHandler(ICommentRepository CommentRepository, IMapper mapper)
+        public GetAllCommentsOfAPostRequestHandler(ICommentRepository CommentRepository, IMapper mapper)
         {
             _CommentRepository = CommentRepository;
             _mapper = mapper;
         }
 
         public async Task<List<CommentDto>> Handle(
-            GetAllCommentsRequest request,
+            GetAllCommentsOfAPostRequest request,
             CancellationToken cancellationToken
         )
         {
-            var allComments = await _CommentRepository.GetAllCommentsAsync(request.postId);
-            return _mapper.Map<List<CommentDto>>(allComments);
+            var allCommentsOfThePost = await _CommentRepository.GetAllCommentsAsync(request.postId);
+            return _mapper.Map<List<CommentDto>>(allCommentsOfThePost);
         }
     }
 }

@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Blog.src.Core.Application.Features.Comments.Requests.Commands
 {
-    public class DeleteCommentCommand : IRequest<CommentDto>
+    public class DeleteCommentCommand : IRequest<Unit>
     {
         public int Id { get; set; }
     }

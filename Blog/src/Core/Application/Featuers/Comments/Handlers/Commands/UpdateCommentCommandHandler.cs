@@ -7,8 +7,9 @@ using MediatR;
 
 namespace Blog.src.Core.Application.Features.Comments.Handlers.Commands
 {
-    public class UpdateCommentCommandHandler : IRequestHandler<UpdateCommentCommand, CommentDto>
+    public class UpdateCommentCommandHandler : IRequestHandler<UpdateCommentCommand, Unit>
     {
+        
         ICommentRepository _Commentrepository;
         IMapper _iMapper;
 
@@ -18,15 +19,24 @@ namespace Blog.src.Core.Application.Features.Comments.Handlers.Commands
             _iMapper = iMapper;
         }
 
-        public async Task<CommentDto> Handle(
+        public async Task<Unit> Handle(
             UpdateCommentCommand command,
             CancellationToken cancellationToken
         )
         {
-            var updatedComment = await _Commentrepository.UpdateAsync(
-                _iMapper.Map<Comment>(command)
+            var theCommentToBeUpdated = await _Commentrepository.GetAsync(command.UpdateCommentDto.Id);
+            if (theCommentToBeUpdated is null){
+                throw new FileNotFoundException();
+            }
+
+            _iMapper.Map(command.UpdateCommentDto, theCommentToBeUpdated);
+
+             await _Commentrepository.UpdateAsync(
+                theCommentToBeUpdated
             );
-            return _iMapper.Map<CommentDto>(updatedComment);
+            return Unit.Value;
         }
+
+       
     }
 }
