@@ -23,10 +23,8 @@ namespace Blog.src.Core.Application.Features.Comments.Handlers.Commands
             CancellationToken cancellationToken
         )
         {
-            var deletedComment = await _CommentRepository.DeleteAsync(command.Id);
+            await _CommentRepository.DeleteCommentAsync(command.Id);
             return Unit.Value;
         }
-
-        
     }
 }

@@ -1,5 +1,6 @@
 using AutoMapper;
 using Blog.src.Core.Application.DTOs.CommentDtos;
+using Blog.src.Core.Application.DTOs.PostDtos;
 using Blog.src.Core.Application.Features.Posts.Requests.Queries;
 using Blog.src.Core.Application.Persistance.Contracts;
 using MediatR;
@@ -7,24 +8,24 @@ using MediatR;
 namespace Blog.src.Core.Application.Features.Comments.Handlers.Queries
 {
     public class GetAllCommentsOfAPostRequestHandler
-        : IRequestHandler<GetAllCommentsOfAPostRequest, List<CommentDto>>
+        : IRequestHandler<GetAllCommentsOfAPostRequest, PostDto>
     {
-        private readonly ICommentRepository _CommentRepository;
+        private readonly IPostRepository _PostRepository;
         private readonly IMapper _mapper;
 
-        public GetAllCommentsOfAPostRequestHandler(ICommentRepository CommentRepository, IMapper mapper)
+        public GetAllCommentsOfAPostRequestHandler(IPostRepository PostRepository, IMapper mapper)
         {
-            _CommentRepository = CommentRepository;
+            _PostRepository = PostRepository;
             _mapper = mapper;
         }
 
-        public async Task<List<CommentDto>> Handle(
+        public async Task<PostDto> Handle(
             GetAllCommentsOfAPostRequest request,
             CancellationToken cancellationToken
         )
         {
-            var allCommentsOfThePost = await _CommentRepository.GetAllCommentsAsync(request.postId);
-            return _mapper.Map<List<CommentDto>>(allCommentsOfThePost);
+            var allCommentsOfThePost = await _PostRepository.GetAllCommentsOfAPostAsync(request.postId);
+            return _mapper.Map<PostDto>(allCommentsOfThePost);
         }
     }
 }

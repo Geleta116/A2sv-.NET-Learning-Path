@@ -23,7 +23,7 @@ namespace Blog.src.Core.Application.Features.Posts.Commands
             CancellationToken cancellationToken
         )
         {
-            await _postRepository.DeleteAsync(command.Id);
+            await _postRepository.DeletePostAsync(command.Id);
             return Unit.Value;
         }
     }
