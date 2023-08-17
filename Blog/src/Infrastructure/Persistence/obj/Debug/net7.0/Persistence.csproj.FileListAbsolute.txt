@@ -1,0 +1,17 @@
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.csproj.AssemblyReference.cache
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.AssemblyInfoInputs.cache
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.AssemblyInfo.cs
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.csproj.CoreCompileInputs.cache
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/bin/Debug/net7.0/Persistence.deps.json
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/bin/Debug/net7.0/Persistence.dll
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/bin/Debug/net7.0/Persistence.pdb
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/bin/Debug/net7.0/Application.dll
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/bin/Debug/net7.0/Domain.dll
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/bin/Debug/net7.0/Domain.pdb
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/bin/Debug/net7.0/Application.pdb
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.csproj.CopyComplete
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.dll
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/obj/Debug/net7.0/refint/Persistence.dll
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.pdb
+/home/geleta/Desktop/A2sv-.NET-Learning-Path/Blog/src/Infrastructure/Persistence/obj/Debug/net7.0/ref/Persistence.dll
